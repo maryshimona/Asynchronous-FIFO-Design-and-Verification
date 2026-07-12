@@ -1,0 +1,264 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Jun 25 15:09:02 2026
+# Process ID         : 20912
+# Current directory  : C:/Users/dell/project_3.runs/synth_1
+# Command line       : vivado.exe -log async_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source async_fifo.tcl
+# Log file           : C:/Users/dell/project_3.runs/synth_1/async_fifo.vds
+# Journal file       : C:/Users/dell/project_3.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-I16NAVM
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 8476 MB
+# Swap memory        : 3892 MB
+# Total Virtual      : 12368 MB
+# Available Virtual  : 3235 MB
+#-----------------------------------------------------------
+source async_fifo.tcl -notrace
+create_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 528.895 ; gain = 220.180
+Command: read_checkpoint -auto_incremental -incremental C:/Users/dell/project_3.srcs/utils_1/imports/synth_1/async_fifo.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/dell/project_3.srcs/utils_1/imports/synth_1/async_fifo.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top async_fifo -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11092
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1074.430 ; gain = 533.184
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'async_fifo' [C:/Users/dell/Downloads/async_fifo.v:17]
+INFO: [Synth 8-6157] synthesizing module 'fifo_mem' [C:/Users/dell/Downloads/async_fifo.v:110]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_mem' (0#1) [C:/Users/dell/Downloads/async_fifo.v:110]
+INFO: [Synth 8-6157] synthesizing module 'sync_r2w' [C:/Users/dell/Downloads/async_fifo.v:147]
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sync_r2w' (0#1) [C:/Users/dell/Downloads/async_fifo.v:147]
+INFO: [Synth 8-6157] synthesizing module 'sync_w2r' [C:/Users/dell/Downloads/async_fifo.v:167]
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sync_w2r' (0#1) [C:/Users/dell/Downloads/async_fifo.v:167]
+INFO: [Synth 8-6157] synthesizing module 'wptr_full' [C:/Users/dell/Downloads/async_fifo.v:187]
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'wptr_full' (0#1) [C:/Users/dell/Downloads/async_fifo.v:187]
+INFO: [Synth 8-6157] synthesizing module 'rptr_empty' [C:/Users/dell/Downloads/async_fifo.v:228]
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rptr_empty' (0#1) [C:/Users/dell/Downloads/async_fifo.v:228]
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (0#1) [C:/Users/dell/Downloads/async_fifo.v:17]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1192.770 ; gain = 651.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1192.770 ; gain = 651.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1192.770 ; gain = 651.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1192.770 ; gain = 651.523
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 4     
++---XORs : 
+	   2 Input      5 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1393.414 ; gain = 852.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+---------------+-----------+----------------------+-------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives  | 
++------------+---------------+-----------+----------------------+-------------+
+|async_fifo  | u_mem/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++------------+---------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1393.414 ; gain = 852.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+---------------+-----------+----------------------+-------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives  | 
++------------+---------------+-----------+----------------------+-------------+
+|async_fifo  | u_mem/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++------------+---------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1393.414 ; gain = 852.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |LUT1     |     2|
+|3     |LUT2     |     2|
+|4     |LUT3     |     4|
+|5     |LUT4     |     4|
+|6     |LUT5     |     5|
+|7     |LUT6     |    11|
+|8     |RAM32M   |     1|
+|9     |RAM32X1D |     2|
+|10    |FDCE     |    39|
+|11    |FDPE     |     1|
+|12    |IBUF     |    14|
+|13    |OBUF     |    10|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------+-----------+------+
+|      |Instance       |Module     |Cells |
++------+---------------+-----------+------+
+|1     |top            |           |    97|
+|2     |  u_mem        |fifo_mem   |     3|
+|3     |  u_rptr_empty |rptr_empty |    23|
+|4     |  u_sync_r2w   |sync_r2w   |    10|
+|5     |  u_sync_w2r   |sync_w2r   |    10|
+|6     |  u_wptr_full  |wptr_full  |    25|
++------+---------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 1082.297
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1637.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1748.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+Synth Design complete | Checksum: ae098b35
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1748.734 ; gain = 1214.676
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1748.734 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dell/project_3.runs/synth_1/async_fifo.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file async_fifo_utilization_synth.rpt -pb async_fifo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 25 15:10:09 2026...
